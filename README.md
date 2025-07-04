@@ -1,10 +1,22 @@
 # MentorLink
 
-MentorLink is a Spring Boot–based web application designed to manage mentorship and internship programs. It allows administrators to allocate projects to mentors, retrieve mentor information based on their workload, update project assignments, and remove projects as needed.
+**MentorLink** is a Spring Boot–based web application that helps organizations manage their mentorship programs by assigning projects to mentors and tracking their workload.
 
-## Purpose
+## Inspiration
 
-This project was inspired by my recent experience mentoring young developers at a summer coding camp focused on web development and STEAM education (Science, Technology, Engineering, Arts, and Mathematics). MentorLink is built to simulate a real-world platform that helps manage mentor-intern relationships efficiently.
+This project was inspired by my experience as a mentor and speaker in **July 2025** during a two-week summer coding camp organized by the nonprofit organization **Kode with Klossy**. The camp focused on web development and STEAM education (Science, Technology, Engineering, Arts, and Mathematics) for girls and non-binary teens aged 13 to 18.
+
+MentorLink builds on that experience to simulate how organizations can structure and scale mentorship programs effectively.
+
+## Features
+
+The application allows administrators to:
+- Allocate a new project to a mentor (max 3 projects per mentor)
+- Retrieve mentors based on the number of projects they are mentoring
+- Update the mentor assigned to a specific project
+- Delete a project and automatically update the mentor’s workload
+
+> Future enhancements will include the ability to register interns and match them to mentors based on skills and interests.
 
 ## Tech Stack
 
@@ -12,21 +24,18 @@ This project was inspired by my recent experience mentoring young developers at 
 - Spring Boot 3.2.x
 - Spring Data JPA
 - MySQL
-- RESTful API
-- Maven
+- RESTful APIs
 - Jakarta Bean Validation
+- Maven
+- JUnit 5 & Mockito (planned)
 
-## Features
+## API Design
 
-- Allocate a new project to a mentor (with constraint on max projects per mentor)
-- Retrieve mentors by number of projects mentored
-- Update the mentor assigned to a project
-- Delete project entries and update mentor workload
-- Input validation and exception handling included
+This application exposes REST endpoints for all major operations. It supports input validation, custom exception handling via `@ControllerAdvice`, and follows clean separation between controller, service, and repository layers.
 
 ## Status
 
-This is a work-in-progress side project built for educational and professional growth. Contributions and feedback are welcome.
+MentorLink is currently under development. The backend structure is in place and the core features are being implemented. A frontend React interface is planned for future integration.
 
 ## Author
 
