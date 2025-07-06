@@ -64,25 +64,25 @@ A frontend React interface is planned for future integration.
 ### 1. Clone the repository:
 
 ```bash
-    git clone https://github.com/gaebar/mentorlink.git
-    cd mentorlink
+git clone https://github.com/gaebar/mentorlink.git
+cd mentorlink
 ```
   
 ### 2. Create the MySQL database:
 
 ```sql
-    CREATE DATABASE mentorlink_db;
+CREATE DATABASE mentorlink_db;
 ```
 ### 3. Configure database connection:
 Edit the `src/main/resources/application.properties` file and update the following lines:
 ```properties
-    spring.datasource.url=jdbc:mysql://localhost:3306/mentorlink_db
-    spring.datasource.username=your_username
-    spring.datasource.password=your_password
+spring.datasource.url=jdbc:mysql://localhost:3306/mentorlink_db
+spring.datasource.username=your_username
+spring.datasource.password=your_password
 ```
 ### 4. Build and run the project:
 ```bash
-    ./mvnw spring-boot:run
+./mvnw spring-boot:run
 ```
 
 ### 5. Access the application:
