@@ -53,6 +53,45 @@ The application exposes RESTful endpoints for all major operations. It supports:
 MentorLink is currently under development. The backend structure is in place and the core features are being implemented.  
 A frontend React interface is planned for future integration.
 
+## How to Run the Project Locally
+### Prerequisites
+- Java 21
+- MySQL 8.0+
+- Maven (or use included wrapper `./mvnw`)
+
+### Setup Steps
+
+### 1. Clone the repository:
+
+```bash
+    git clone https://github.com/gaebar/mentorlink.git
+    cd mentorlink
+```
+  
+### 2. Create the MySQL database:
+
+```sql
+    CREATE DATABASE mentorlink_db;
+```
+### 3. Configure database connection:
+Edit the `src/main/resources/application.properties` file and update the following lines:
+```properties
+    spring.datasource.url=jdbc:mysql://localhost:3306/mentorlink_db
+    spring.datasource.username=your_username
+    spring.datasource.password=your_password
+```
+### 4. Build and run the project:
+```bash
+    ./mvnw spring-boot:run
+```
+
+### 5. Access the application:
+
+Once the application is running, open your browser and go to:
+
+[http://localhost:8080](http://localhost:8080)
+
+
 ## Inspiration
 
 This project was inspired by my experience as a mentor and speaker in July 2025 during a two-week summer coding camp organized by the nonprofit organization [Kode with Klossy](https://www.kodewithklossy.com/).  
