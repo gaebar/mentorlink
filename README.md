@@ -31,6 +31,15 @@ Mentors can also be queried based on their current workload, allowing administra
 - Maven
 - JUnit 5 and Mockito (planned)
 
+## Architecture
+<img src="assets/mentorlink-architecture.png" alt="MentorLink Architecture" width="500">
+
+
+MentorLink follows a clean layered architecture with clear separation of concerns:
+- **Controller Layer**: Handles HTTP requests, validation, and exception handling
+- **Service Layer**: Contains business logic and orchestrates operations
+- **Repository Layer**: Manages data persistence using Spring Data JPA
+
 ## API Design
 
 The application exposes RESTful endpoints for all major operations. It supports:
@@ -50,10 +59,6 @@ This project was inspired by my experience as a mentor and speaker in July 2025 
 The camp focused on web development and STEAM education (Science, Technology, Engineering, Arts, and Mathematics) for girls and non-binary teens aged 13 to 18.
 
 MentorLink builds on that experience to explore how structured mentorship tools can support learning, capacity planning, and equity in tech education programs.
-
-## Status
-
-MentorLink is currently under development. The backend structure is in place and the core features are being implemented. A frontend React interface is planned for future integration.
 
 ## Author
 
