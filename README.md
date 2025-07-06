@@ -1,24 +1,26 @@
 # MentorLink
 
-**MentorLink** is a Spring Boot–based web application that helps organizations manage their mentorship programs by assigning projects to mentors and tracking their workload.
+**MentorLink** is a Spring Boot–based web application designed to help organizations run mentorship programs efficiently.  
+It provides tools for assigning projects to mentors, enforcing workload limits, and retrieving mentor availability — making it easier to scale and manage structured mentorship initiatives.
 
-## Inspiration
-
-This project was inspired by my experience as a mentor and speaker in **July 2025** during a two-week summer coding camp organized by the nonprofit organization **Kode with Klossy**. The camp focused on web development and STEAM education (Science, Technology, Engineering, Arts, and Mathematics) for girls and non-binary teens aged 13 to 18.
-
-MentorLink builds on that experience to simulate how organizations can structure and scale mentorship programs effectively.
-
-## Features
+## Core Features
 
 The application allows administrators to:
-- Allocate a new project to a mentor (max 3 projects per mentor)
+
+- Allocate a new project to a mentor (up to 3 projects per mentor)
 - Retrieve mentors based on the number of projects they are mentoring
 - Update the mentor assigned to a specific project
 - Delete a project and automatically update the mentor’s workload
 
-> Future enhancements will include the ability to register interns and match them to mentors based on skills and interests.
+Planned enhancements include the ability to register interns and match them to mentors based on skills and interests.
 
-## Tech Stack
+## Workload Tracking
+
+MentorLink keeps track of each mentor’s workload by counting the number of active projects assigned to them.  
+The system enforces a maximum of three projects per mentor. Each time a project is created, updated, reassigned, or deleted, the workload count is automatically adjusted in the database using Spring Data JPA.  
+Mentors can also be queried based on their current workload, allowing administrators to make informed assignment decisions.
+
+## Technical Stack
 
 - Java 21
 - Spring Boot 3.2.x
@@ -27,11 +29,27 @@ The application allows administrators to:
 - RESTful APIs
 - Jakarta Bean Validation
 - Maven
-- JUnit 5 & Mockito (planned)
+- JUnit 5 and Mockito (planned)
 
 ## API Design
 
-This application exposes REST endpoints for all major operations. It supports input validation, custom exception handling via `@ControllerAdvice`, and follows clean separation between controller, service, and repository layers.
+The application exposes RESTful endpoints for all major operations. It supports:
+
+- Input validation with `@Valid` and Jakarta Bean Validation
+- Centralized exception handling via `@ControllerAdvice`
+- Clear separation of concerns between controller, service, and repository layers
+
+## Development Status
+
+MentorLink is currently under development. The backend structure is in place and the core features are being implemented.  
+A frontend React interface is planned for future integration.
+
+## Inspiration
+
+This project was inspired by my experience as a mentor and speaker in July 2025 during a two-week summer coding camp organized by the nonprofit organization [Kode with Klossy](https://www.kodewithklossy.com/).  
+The camp focused on web development and STEAM education (Science, Technology, Engineering, Arts, and Mathematics) for girls and non-binary teens aged 13 to 18.
+
+MentorLink builds on that experience to explore how structured mentorship tools can support learning, capacity planning, and equity in tech education programs.
 
 ## Status
 
