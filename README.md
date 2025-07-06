@@ -48,6 +48,14 @@ The application exposes RESTful endpoints for all major operations. It supports:
 - Centralized exception handling via `@ControllerAdvice`
 - Clear separation of concerns between controller, service, and repository layers
 
+## API Endpoints Overview (WIP)
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/mentorlink/project` | Allocate project to mentor |
+| GET | `/mentorlink/mentor/{count}` | Get mentors by number of projects |
+| PUT | `/mentorlink/project/{projectId}/{mentorId}` | Update project's mentor |
+| DELETE | `/mentorlink/project/{projectId}` | Delete a project |
+
 ## Development Status
 
 MentorLink is currently under development. The backend structure is in place and the core features are being implemented.  
