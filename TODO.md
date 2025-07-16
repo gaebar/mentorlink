@@ -16,6 +16,8 @@
 - Add integration tests for repository behavior
 - Consider pagination and sorting for list endpoints
 - Add exception handling using `@ControllerAdvice`
+- Monitor `springdoc-openapi` upgrades for security (currently using 2.8.9)
+
 
 ## Optional Ideas
 - Add a global `ResponseWrapper` for consistent API responses
