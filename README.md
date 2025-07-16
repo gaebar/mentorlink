@@ -56,6 +56,22 @@ The application exposes RESTful endpoints for all major operations. It supports:
 | PUT | `/mentorlink/project/{projectId}/{mentorId}` | Update project's mentor |
 | DELETE | `/mentorlink/project/{projectId}` | Delete a project |
 
+## API Documentation
+
+MentorLink uses **Springdoc OpenAPI** to automatically generate interactive API documentation.
+
+Once the application is running, you can explore and test the available endpoints directly from your browser using Swagger UI:
+
+[http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+
+The documentation includes:
+
+- Request and response schemas
+- HTTP methods and endpoint descriptions
+- Validation rules for input data
+- Example values for easier testing
+
+This makes it easier for developers and integrators to understand and interact with the API.
 ## Development Status
 
 MentorLink is currently under development. The backend structure is in place and the core features are being implemented.  

@@ -6,17 +6,25 @@ import jakarta.persistence.*;
 @Table(name = "mentors")
 public class Mentor {
 
+    // === FIELDS ===
+
+    /** Primary key: auto-generated mentor ID */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "mentor_id")
     private Integer mentorId;
 
+    /** Mentor's full name (max 50 characters, cannot be null) */
     @Column(name = "mentor_name", nullable = false, length = 50)
     private String mentorName;
 
+    /** Number of projects the mentor has mentored (cannot be null) */
     @Column(name = "projects_mentored", nullable = false)
     private Integer numberOfProjectsMentored;
 
+    // === CONSTRUCTORS ===
+
+    /** All-args constructor for quick instantiation */
     public Mentor() {
     }
 
@@ -24,6 +32,8 @@ public class Mentor {
         this.mentorName = mentorName;
         this.numberOfProjectsMentored = numberOfProjectsMentored;
     }
+
+    // === GETTERS AND SETTERS ===
 
     public Integer getMentorId() {
         return mentorId;
@@ -48,4 +58,6 @@ public class Mentor {
     public void setNumberOfProjectsMentored(Integer numberOfProjectsMentored) {
         this.numberOfProjectsMentored = numberOfProjectsMentored;
     }
+
+    // === OPTIONAL: toString(), equals(), hashCode() ===
 }
